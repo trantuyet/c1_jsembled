@@ -2,11 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bài tập 3</title>
+    <title>giải phương trình bậc 2</title>
     <script src="ebjs.js"></script>
 </head>
 <body>
-    <button id="ab"> Click me</button>
-    <script src="ebjs.js"></script>
+<script type="text/javascript">
+    function nhapdl() {
+        let a1 = document.getElementById("a").value;
+        let b1 = document.getElementById("b").value;
+        let c1 = document.getElementById("c").value;
+        let d = b1*b1- 4*a1*c1;
+        let x0 = (-b1/(2*a1)) ;
+        let x1 = ( -b1 -Math.sqrt(d))/2*a1;
+        let x2 = ( -b1 +Math.sqrt(d))/2*a1;
+        if (d<0)
+            {
+                alert("phương trình này vô nghiệm");
+            }
+        else{
+            if ( d === 0)
+                {
+                    alert("x= " + x0);
+                }
+            }
+        if (d>0) {
+            alert("phương trình có hai nghiệm x1 = "+ x1 + "và x2 = " + x2);
+        }
+    }
+</script>
+<form>
+    nhập hệ số a:<input type="text" id="a" name="number" /> <br>
+    nhập hệ số b:<input type="text" id="b" name="number" /> <br>
+    nhập hệ số c:<input type="text" id="c" name="number" /> <br>
+    <br> <input type="button" value="cube" onclick="nhapdl()" />
+</form>
 </body>
 </html>
